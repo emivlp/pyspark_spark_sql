@@ -1,0 +1,49 @@
+# COVID-19 Data Analysis with PySpark: EDA, Feature Engineering & Classification
+
+This repository contains a Jupyter Notebook (or Google Colab Notebook) that demonstrates an end-to-end pipeline for analyzing the OWID COVID-19 dataset using PySpark. The project includes data ingestion, exploratory data analysis (EDA), feature engineering, various visualizations (including time-series analysis), and a binary classification model that predicts whether a given day’s new COVID-19 cases exceed 1000.
+
+## Table of Contents
+
+- [Introduction]
+- [Project Overview]
+- [Installation & Environment Setup]
+- [Usage]
+- [Notebook Structure]
+- [Contact](#contact)
+
+## Introduction
+
+The **OWID COVID-19** dataset, maintained by [Our World in Data](https://github.com/owid/covid-19-data), provides comprehensive global metrics on COVID-19 such as cases, deaths, tests, and vaccinations on a daily basis. This project uses PySpark to analyze the dataset at scale. In addition to traditional EDA, the notebook demonstrates:
+
+- Loading and inspecting the data with PySpark.
+- Filtering, grouping, and querying the data using both DataFrame API and Spark SQL.
+- Engineering features such as the case fatality ratio and vaccinated ratio.
+- Building visualizations, including time-series analysis, bar charts, and correlation matrices (using Matplotlib and Seaborn).
+- Training a binary Logistic Regression classifier to determine if a day has more than **1000 new cases**.
+- Investigating false positives/negatives and analyzing feature importance.
+
+## Project Overview
+
+This notebook is organized into several key sections:
+
+1. **Environment Setup:** Installing Java, Spark, and PySpark in Google Colab.
+2. **Data Ingestion:** Downloading the OWID COVID-19 dataset and loading it into a Spark DataFrame.
+3. **Exploratory Data Analysis (EDA):** Inspecting the dataset, filtering rows, and computing descriptive statistics.
+4. **Spark SQL Queries:** Using SQL to aggregate and explore the data.
+5. **Feature Selection & Correlation:** Creating a subset of key metrics and visualizing correlations.
+6. **Time-Series Visualization:** Plotting actual vs. predicted new cases, rolling averages, and prediction errors.
+7. **Feature Engineering:** Deriving additional features (e.g., case fatality ratio, vaccinated ratio).
+8. **Binary Classification:** Training a Logistic Regression model with class weighting and threshold adjustment, followed by error analysis.
+9. **Investigation of False Positives/Negatives:** Analyzing where the model misclassified data.
+10. **Feature Coefficient Analysis:** Reviewing model coefficients to understand feature importance.
+
+## Installation & Environment Setup
+
+This project is designed to run on Google Colab. The notebook includes code to install and configure the following:
+- **Java 8** (required by Spark)
+- **Apache Spark 3.2.1**
+- **PySpark** and **Py4J**
+- **findspark**
+
+If you wish to run the notebook locally or in another environment, please ensure you have these dependencies installed.
+
